@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>אנימה אונליין - האנימות המתורגמות שלי</title>
+    <style>
+        /* עיצוב כללי של האתר */
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #121212; 
+            color: white; 
+            margin: 0; 
+            padding: 20px; 
+            /* השורה שמוסיפה את הירידה למטה */
+            min-height: 150vh; 
+        }
+        header { text-align: center; padding: 20px; }
+        h1 { color: #ff4500; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+
+        /* סרגל חיפוש  */
+        .search-wrapper { margin-bottom: 40px; display: flex; justify-content: center; }
+        #searchInput { 
+            width: 100%; max-width: 500px; padding: 12px 20px; 
+            background: #1a1a1a; border: 1px solid #333; border-radius: 8px; 
+            color: white; outline: none; font-size: 16px; transition: 0.3s;
+        }
+        #searchInput:focus { border-color: #ff4500; box-shadow: 0 0 10px rgba(255, 69, 0, 0.2); }
+
+        /* סידור הכרטיסיות */
+        .anime-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        /* עיצוב כרטיסייה בודדת */
+        .anime-card { 
+            background: #1f1f1f; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            text-decoration: none; 
+            color: white; 
+            transition: 0.3s ease; 
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .anime-card:hover { 
+            transform: scale(1.05); 
+            border-color: #ff4500; 
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+        }
+
+        .anime-card img { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+        }
+
+        .anime-card h3 { 
+            padding: 15px; 
+            margin: 0; 
+            text-align: center; 
+            font-size: 1.2rem; 
+            background: #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>אנימה אונליין</h1>
+    <div class="search-wrapper">
+        <input type="text" id="searchInput" onkeyup="filterAnime()" placeholder="חפש אנימה מהרשימה...">
+    </div>
+</header>
+
+<div class="anime-grid" id="animeGrid">
+    <a href="episodes.html" class="anime-card" data-name="הנבלית שזכתה לאהבת נסיך הממלכה השכנה">
+        <img src="https://img.aniplus.co/Imgs/animePictures/1766486731352_anime.jpg" alt="פוסטר אנימה">
+        <h3> הנבלית שזכתה לאהבת נסיך הממלכה השכנה</h3>
+    </a>
+
+  
+
+   
+
+
+<script>
+    function filterAnime() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let cards = document.getElementsByClassName('anime-card');
+
+        for (let i = 0; i < cards.length; i++) {
+            let name = cards[i].getAttribute('data-name');
+            if (name.toLowerCase().includes(input)) {
+                cards[i].style.display = "flex";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<a href="anyway.html" class="anime-card" data-name="בכל מקרה אני מתאהב בך">
+    <img src="https://m.media-amazon.com/images/M/MV5BZmE3NzI2MjUtZGQ4Yi00YWRjLTg0OWUtNmU4ZTdlY2Q3ODAxXkEyXkFqcGc@._V1_.jpg">
+    <h3>בכל מקרה אני מתאהב בך עונה</h3>
+</a>

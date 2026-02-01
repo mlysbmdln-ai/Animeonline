@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>בכל מקרה אני מתאהב בך</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #121212; 
+            color: white; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        .back-link { align-self: flex-start; color: #ff4500; text-decoration: none; margin-bottom: 20px; font-weight: bold; font-size: 1.1rem; transition: 0.3s; }
+        .back-link:hover { text-shadow: 0 0 8px #ff4500; }
+        .anime-container { 
+            background: #1f1f1f; 
+            width: 100%; 
+            max-width: 900px; 
+            border-radius: 15px; 
+            border: 1px solid #333; 
+            padding: 30px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
+        }
+        .header-content { display: flex; gap: 25px; margin-bottom: 30px; }
+        .mini-poster { 
+            width: 180px; 
+            height: 260px; 
+            border-radius: 10px; 
+            object-fit: cover; 
+            border: 2px solid #ff4500;
+        }
+        .info-text { flex: 1; }
+        .info-text h1 { margin: 0 0 10px 0; color: #ff4500; font-size: 1.8rem; }
+        .info-text p { color: #bbb; line-height: 1.6; font-size: 1rem; }
+        .episodes-section { background: #121212; border-radius: 10px; padding: 20px; border: 1px solid #444; }
+        .episodes-section h2 { margin-top: 0; font-size: 1.2rem; border-bottom: 2px solid #ff4500; padding-bottom: 10px; display: inline-block; }
+        .episodes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin-top: 20px; }
+        .ep-btn { background: #252525; color: white; text-align: center; padding: 12px; border-radius: 5px; text-decoration: none; font-size: 0.95rem; border: 1px solid #333; transition: 0.3s; font-weight: 500; }
+        .ep-btn:hover { background: #ff4500; border-color: #ff4500; color: white; transform: translateY(-2px); }
+        @media (max-width: 600px) { .header-content { flex-direction: column; align-items: center; text-align: center; } .mini-poster { width: 160px; height: 230px; } }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">→ חזרה לדף הבית</a>
+    <div class="anime-container">
+        <div class="header-content">
+            <img src="https://myanimelist.net/images/anime/1021/146952.jpg" class="mini-poster" alt="פוסטר">
+            <div class="info-text">
+                <h1>בכל מקרה אני מתאהב בך</h1>
+                <p>תקציר לאחר יום הולדתה ה-17 המאכזב של מיזוהו, שמתרחש במקביל להתפרצות של מחלה לא ידועה ושרשרת של אירועים מצערים. נקודת המפנה מגיעה כאשר קיזוקי מחליט להזמין את מיזוהו לצאת, צעד שדוחף את שין לחשוף גם הוא את רגשותיו כלפי חברת הילדות שלו.
+
+הווידויים המקבילים יוצרים בלבול רב אצל מיזוהו. במקביל, גם איירו וסיוגו (חבריהם לקבוצה) מתמודדים עם בעיות רומנטיות משלהם, מה שמוביל לכך שהדינמיקה והקשרים ההדוקים בין חמשת חברי הילדות מתחילים להיסדק ולהתפורר.</p>
+                <div style="margin-top: 15px;">
+                    <span style="background: #ff4500; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">תאריך שידור 2026</span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="episodes-section">
+            <h2>רשימת פרקים</h2>
+            <div class="episodes-grid">
+                <a href="https://drive.google.com/file/d/1uEWxvILUSWS2rY0Sal19Vs6DgaVS3a02/view?usp=gmail" class="ep-btn">פרק 1</a>
+                <a href="קישור_לפרק_2" class="ep-btn">פרק 2</a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+anime-site
+│
+├─ index.html          ← עמוד ראשי (רשימת אנימות)
+├─ style.css           ← עיצוב האתר (לבן ומודרני)
+├─ script.js           ← קוד קטן לנגן ולחיצות
+├─ demon-slayer.html   ← עמוד אנימה עם רשימת פרקים
+├─ episode.html        ← עמוד נגן פרק
+└─ videos              ← תיקיית סרטונים
+    ├─ ds-ep1.mp4
+    └─ ds-ep2.mp4
